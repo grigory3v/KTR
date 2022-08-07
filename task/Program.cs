@@ -18,6 +18,37 @@ namespace KTR
                 array[i] = Convert.ToString(Console.ReadLine());
 
             }
+            Console.WriteLine();
+            PrintInputArray(array);
+            PrintModifiedArray(array);
+
         }
+        public static void PrintInputArray(string?[] array)
+        {
+            Console.Write($"введенный масив : [ ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"{array[i]} ");
+            }
+            Console.WriteLine("]");
+        }
+
+        public static void PrintModifiedArray(string?[] array)
+        {
+            Console.Write($"сформированный массив : [ ");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                char[] newArray;
+                newArray = array[i].ToCharArray();
+                if (newArray.Length <= 3)
+                {
+                    Console.Write($"{array[i]} ");
+                }
+
+            }
+            Console.WriteLine("]");
+        }
+
     }
 }
